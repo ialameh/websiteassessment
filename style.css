@@ -1,0 +1,231 @@
+
+  
+  html {
+    box-sizing: border-box;
+    font-family: Roboto, Helvetica;
+    font-weight: 900;
+    font-size: 10px;
+    background: linear-gradient(90deg, rgb(248,61,102), rgb(127,70,202));
+    background-repeat:no-repeat;
+   
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    height: auto;
+  }
+  body {
+    font-size: 15px;
+  }
+  
+/* Inheriting boxsizing is a good practice, shown at https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/* uppercase the naviation items */
+  nav {
+    text-transform: uppercase;
+    
+}
+
+/* make sure that list items does not have the bullets, and reset margin, padding and overflow to hidden */
+  
+nav  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+
+  }
+  /* good practive to create horizontal menu */
+  nav  li {
+    float: left;
+    font-size: 14px;
+    width:20%;
+  }
+  
+  nav li a {
+    display: block;
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+    background-color: rgb(255,198,0);
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+  }
+  
+  nav li a:hover {
+    background-color: #111;
+  }
+
+  
+
+  /* Grid time,  */
+  .item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(0, 0, 0);
+    font-size: 24px;
+    background-color: rgb(255,198,0);
+  }
+
+  button {
+    background: rgb(255,198,0);
+    border: 0;
+    padding: 10px 20px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .banner {
+    display: grid;
+    grid-template-areas:
+      "bigblock bigblock topright"
+      "bigblock bigblock bottomright";
+    grid-gap: 20px;
+    margin-top: 10px;
+  }
+  
+
+  
+  .bigblock {
+    grid-area: bigblock;
+    min-height: 400px;
+    background: white url(images/taco.jpg);
+    background-size: cover;
+    background-position: bottom right;
+    padding: 40px;
+    display: grid;
+    align-content: center;
+    justify-items: left;
+  }
+  .bigblock > * {
+    background: #ffc600;
+    padding: 5px;
+  }
+
+  .right {
+    background: #ffc600;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .right p {
+    margin: 0;
+  }
+  .price {
+    font-weight: 200;
+    font-size: 50px;
+  }
+  .topright {
+    grid-area: topright;
+  }
+  .bottomright {
+    grid-area: bottomright;
+  }
+  
+ 
+  .offerings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .offering {
+    background: white;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    padding: 10px 10px;
+
+  }
+  .offering h3 {
+    font-weight: 300;
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .offering p {
+    font-weight: 200;
+  }
+  
+  .featured {
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+  }
+  
+  .featured img {
+    padding: 20px;
+  }
+  .featuredtaco h2 {
+    font-weight: 300;
+    font-size: 30px;
+  }
+  .featuredtaco p {
+    font-weight: 200;
+  }
+  .featuredtaco button {
+    margin-bottom: 20px;
+  }
+  .icon {
+    font-size: 40px;
+  }
+
+  .galleryheader{
+    display: grid;
+    padding: 20px;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;  
+} 
+  
+.beforegallery {
+    width:100%;
+    height:10px;
+    background: linear-gradient(90deg,rgb(230,60,105), rgb(254,197,1));
+
+  }
+  .aftergallery {
+    width:100%;
+    height:10px;
+    background: linear-gradient(90deg, rgb(254,197,1), rgb(127,70,202));
+
+  }
+
+  .restaurantimages {
+    display: grid;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    align-items: center;
+    justify-items: center;
+  }
+/*   
+  .restaurantimages img {
+    width:200px;
+  } */
