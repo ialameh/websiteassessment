@@ -66,5 +66,8 @@ folder]{.ul}](https://drive.google.com/drive/folders/1X9ZXg9jFKPcGwgB01_uuHuThzY
 
 A sample page is shown below as a reference:
 
-![](images/image1.png){width="5.540277777777778in"
-height="4.778472222222222in"}
+![](images/image1.png)
+
+# My Response 
+
+![](images/samresponse.png)
